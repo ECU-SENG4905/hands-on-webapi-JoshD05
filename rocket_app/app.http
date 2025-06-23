@@ -30,3 +30,89 @@ Content-Type: application/json
     "email": "brandi@example.com",
     "active": true
   }
+
+### Get all tasks
+GET {{web_api_host}}/api/tasks
+
+###
+
+### Create a new task
+POST {{web_api_host}}/api/tasks
+Content-Type: application/json
+
+{
+  "task_name": "Integration Test Task"
+}
+
+###
+
+### Get a single task (replace 1 with the actual task_id you want to test)
+GET {{web_api_host}}/api/tasks/1
+
+###
+
+### Update a task (replace 1 with the actual task_id)
+PUT {{web_api_host}}/api/tasks/1
+Content-Type: application/json
+
+{
+  "task_name": "Updated Integration Test Task"
+}
+
+### Get all assignments
+GET {{web_api_host}}/api/assignments
+
+### Create a new assignment
+POST {{web_api_host}}/api/assignments
+Content-Type: application/json
+
+{
+  "user_id": 1,
+  "task_id": 1,
+  "task_status_id": 1
+}
+
+### Get a single assignment (user_id + task_id)
+GET {{web_api_host}}/api/assignments/1/1
+
+###
+
+### Update an assignment (user_id + task_id)
+PUT {{web_api_host}}/api/assignments/1/1
+Content-Type: application/json
+
+{
+  "user_id": 1,
+  "task_id": 1,
+  "task_status_id": 3
+}
+
+### Get all statuses
+GET {{web_api_host}}/api/statuses
+
+###
+
+### Create a new status
+POST {{web_api_host}}/api/statuses
+Content-Type: application/json
+
+{
+  "status_name": "Integration Test Status"
+}
+
+###
+
+### Get a single status (replace 1 with the actual task_status_id you want to test)
+GET {{web_api_host}}/api/statuses/1
+
+###
+
+### Update a status (replace 1 with the actual task_status_id)
+PUT {{web_api_host}}/api/statuses/1
+Content-Type: application/json
+
+{
+  "status_name": "Updated Integration Test Status"
+}
+
+###
